@@ -2,5 +2,5 @@
 window.SIMM_CONFIG = {
   nexoraLoginUrl: "",
   commercialEmail: "gestormarcosmartins1@gmail.com",
-  whatsappNumber: ""
+  whatsappNumber: "5516993231084"
 };
