@@ -27,4 +27,4 @@ antes de ativá-lo. Segredos e chaves nunca devem ser versionados.
 
 ## Pendente antes da publicação pública
 
-Confirmar URL de login Nexora, e-mail/WhatsApp comercial, política de privacidade e texto institucional definitivo, formato vetorial do logo e termos de serviços/SLAs.
+Confirmar URL de login Nexora, e-mail/WhatsApp comercial e texto institucional definitivo, formato vetorial do logo e termos de serviços/SLAs.
