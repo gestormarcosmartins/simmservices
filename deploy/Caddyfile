@@ -1,0 +1,28 @@
+# Caddyfile do site SIMM Services
+# Copie para /etc/caddy/Caddyfile. O Caddy emite e renova o SSL automaticamente
+# (exige portas 80 e 443 TCP/UDP abertas e DNS apontando para este servidor).
+
+simmservices.com.br {
+	root * /var/www/simmservices
+	encode gzip zstd
+	file_server
+
+	@static path *.css *.js *.png *.jpg *.jpeg *.gif *.svg *.ico *.webp
+	header @static Cache-Control "public, max-age=604800"
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+
+	log {
+		output file /var/log/caddy/simmservices.log
+	}
+}
+
+www.simmservices.com.br {
+	redir https://simmservices.com.br{uri} permanent
+}
